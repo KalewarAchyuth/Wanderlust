@@ -1,0 +1,32 @@
+<% layout("/layouts/boilerplate") %>
+
+<section class="hero-section">
+    <div class="hero-copy">
+        <p class="eyebrow"><i class="fa-solid fa-location-dot"></i> STAY CURIOUS</p>
+        <h1>Feel at home,<br>wherever you roam.</h1>
+        <p class="hero-description">Discover handpicked stays and memorable places, from quiet mountain cabins to sunlit city apartments.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary hero-btn" href="/listings">Explore stays <i class="fa-solid fa-arrow-right"></i></a>
+            <% if (!currUser) { %>
+                <a class="btn btn-outline-dark hero-outline-btn" href="/signup">Create an account</a>
+            <% } %>
+        </div>
+        <div class="hero-stats">
+            <div><strong>1,000+</strong><span>places to stay</span></div>
+            <div><strong>50+</strong><span>destinations</span></div>
+            <div><strong>4.9/5</strong><span>guest rating</span></div>
+        </div>
+    </div>
+    <div class="hero-image-wrap">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="A bright, modern holiday home beside a pool">
+        <div class="hero-location-card"><i class="fa-solid fa-star"></i><div><strong>Made for wandering</strong><span>Stays with character</span></div></div>
+    </div>
+</section>
+
+<section class="home-featured">
+    <div>
+        <p class="eyebrow">FIND YOUR ESCAPE</p>
+        <h2>Every journey starts with a place.</h2>
+    </div>
+    <a href="/listings" class="text-link">Browse all listings <i class="fa-solid fa-arrow-right"></i></a>
+</section>

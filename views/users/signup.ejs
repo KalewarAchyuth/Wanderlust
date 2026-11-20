@@ -1,0 +1,23 @@
+<% layout("/layouts/boilerplate") %>
+
+<section class="auth-page">
+    <div class="auth-panel auth-intro">
+        <a class="auth-logo" href="/"><i class="fa-regular fa-compass"></i> wanderlust</a>
+        <div>
+            <p class="eyebrow">JOIN THE JOURNEY</p>
+            <h1>Find places that feel like yours.</h1>
+            <p>Create an account to save your favourites and start sharing the places you love.</p>
+        </div>
+        <p class="auth-note"><i class="fa-solid fa-shield-halved"></i> Your account is protected with encrypted passwords.</p>
+    </div>
+    <div class="auth-panel auth-form-panel">
+        <div class="auth-heading"><h2>Create your account</h2><p>Already a member? <a href="/login">Log in</a></p></div>
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3"><label for="displayName" class="form-label">Your name</label><input id="displayName" name="displayName" class="form-control" minlength="2" maxlength="50" required autocomplete="name"><div class="invalid-feedback">Please enter your name.</div></div>
+            <div class="mb-3"><label for="email" class="form-label">Email address</label><input id="email" type="email" name="email" class="form-control" required autocomplete="email"><div class="invalid-feedback">Enter a valid email address.</div></div>
+            <div class="mb-2"><label for="password" class="form-label">Password</label><div class="password-field"><input id="password" type="password" name="password" class="form-control" minlength="8" required autocomplete="new-password"><button type="button" class="password-toggle" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div><div class="password-help"><span id="passwordStrength">Use 8+ characters</span></div><div class="invalid-feedback">Use at least 8 characters.</div></div>
+            <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="terms" required><label class="form-check-label" for="terms">I agree to the <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</label><div class="invalid-feedback">Please accept before continuing.</div></div>
+            <button class="btn btn-primary auth-submit" type="submit">Create account <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+    </div>
+</section>
